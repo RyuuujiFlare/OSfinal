@@ -156,3 +156,51 @@ header h1 {
         padding: 8px;
     }
 }
+/* --- Add this to your style.css --- */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pie-chart {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+/* Color logic for the rings */
+.win-color { color: #0078d4; }
+.mac-color { color: #ffffff; }
+.lin-color { color: #3fb950; }
+/* Styling for the added diagram image */
+.architecture-diagram {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    border-radius: 8px;
+    border: 1px solid rgba(188, 19, 254, 0.5);
+    display: block;
+}
+
+/* Ensure the text looks like a student report */
+.explanation-text {
+    text-indent: 20px;
+    margin-bottom: 15px;
+}
