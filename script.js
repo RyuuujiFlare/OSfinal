@@ -1,36 +1,58 @@
 const osData = {
-    windows: `Microsoft Windows remains the dominant force in the desktop market, utilizing a <strong>Hybrid Kernel</strong> architecture. It balances performance with broad hardware support, making it ideal for gaming and enterprise environments where compatibility with legacy software is a high priority. Windows manages memory through a sophisticated Virtual Memory Manager that utilizes "paging" to swap data between RAM and the hard drive, ensuring smooth performance even under heavy loads. For security, modern versions like Windows 11 require TPM 2.0 hardware and utilize Windows Defender and BitLocker to protect data at rest and in transit. Its massive market share—often cited between 66% and 73%—makes it the standard for global business operations and high-end consumer gaming.
-    <br><br>
+    windows: `From what I learned in my research, Microsoft Windows is a versatile OS powered by a Hybrid Kernel architecture. I found that this design is a clever compromise, combining the speed of a monolithic core with the modularity of a microkernel to support millions of hardware drivers. In my analysis, Windows stands out because of its massive ecosystem; it is the industry standard for gaming and enterprise productivity software. I also discovered that its security has improved significantly with TPM 2.0 requirements. I believe its dominance comes from being the most user-friendly all-rounder available today.
     <table class="os-table">
-        <tr><th>Feature</th><th>Technical Specification</th></tr>
+    <tr><th>Feature</th><th>Technical Specification</th></tr>
         <tr><td>Kernel Type</td><td>Hybrid (NT)</td></tr>
         <tr><td>File System</td><td>NTFS</td></tr>
         <tr><td>Market Share</td><td>~70% Worldwide</td></tr>
         <tr><td>Security</td><td>Windows Defender / TPM</td></tr>
         <tr><td>Source Model</td><td>Proprietary</td></tr>
-    </table>`,
+
+    </table>
+    <div class="metrics-grid">
+        <div><div class="pie-chart" style="background: conic-gradient(#0078d4 75%, #222 0);">75%</div><span class="metric-label">Security</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#0078d4 85%, #222 0);">85%</div><span class="metric-label">Stability</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#0078d4 95%, #222 0);">95%</div><span class="metric-label">Performance</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#0078d4 60%, #222 0);">60%</div><span class="metric-label">Custom</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#0078d4 98%, #222 0);">98%</div><span class="metric-label">Compat</span></div>
+    </div>
+    <div class="my-sign">DEVELOPED BY: NUMER JAN T. BANDE</div>`,
     
-    mac: `macOS is built on a <strong>Unix-based</strong> foundation known as Darwin, utilizing the XNU kernel which combines Mach microkernel features with BSD's modularity. This design provides incredible stability and an advanced security layer known as System Integrity Protection (SIP), which prevents even administrative users from modifying critical system files. Memory management is highly efficient on Apple’s Silicon (M-series) chips, using a Unified Memory Architecture that allows the CPU and GPU to share the same memory pool for lightning-fast creative workflows like 8K video rendering. While it holds a smaller market share (approx. 15-20%), it is the industry standard for design and media production due to its color accuracy and optimized software ecosystem.
-    <br><br>
+    mac: `Based on my study of Apple’s ecosystem, macOS is a Unix-based system that uses the XNU kernel, which I learned stands for "X is Not Unix". I found it fascinating how Apple optimizes its software specifically for its own Silicon hardware, leading to incredible energy efficiency and stability. From my perspective, macOS is the ultimate tool for creative professionals because of its sleek Aqua interface and robust security features like System Integrity Protection. I observed that while it is a "walled garden," the seamless integration between Mac and iPhone creates a productivity flow that I find unmatched elsewhere.
     <table class="os-table">
-        <tr><th>Feature</th><th>Technical Specification</th></tr>
+       <tr><th>Feature</th><th>Technical Specification</th></tr>
         <tr><td>Kernel Type</td><td>XNU (Mach/BSD)</td></tr>
         <tr><td>File System</td><td>APFS</td></tr>
         <tr><td>Security</td><td>FileVault / SIP / Gatekeeper</td></tr>
         <tr><td>Target Market</td><td>Creative Professionals</td></tr>
         <tr><td>Source Model</td><td>Proprietary</td></tr>
-    </table>`,
+    </table>
+    <div class="metrics-grid">
+        <div><div class="pie-chart" style="background: conic-gradient(#fff 88%, #222 0);">88%</div><span class="metric-label">Security</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#fff 94%, #222 0);">94%</div><span class="metric-label">Stability</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#fff 90%, #222 0);">90%</div><span class="metric-label">Performance</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#fff 40%, #222 0);">40%</div><span class="metric-label">Custom</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#fff 70%, #222 0);">70%</div><span class="metric-label">Compat</span></div>
+    </div>
+    <div class="my-sign">DEVELOPED BY: NUMER JAN T. BANDE</div>`,
     
-    linux: `Linux is a powerful <strong>Monolithic Kernel</strong> OS where all core services—like device drivers and file system management—reside in the kernel space for maximum execution speed. Because it is open-source under the GPL license, it is highly customizable, allowing developers to choose from various Desktop Environments (DE) like GNOME or KDE. Linux is the undisputed king of the server world, powering nearly 100% of the world's supercomputers and the vast majority of web infrastructure due to its legendary uptime and security. Its security model is based on strict user permissions (Root vs User), and its transparency allows for rapid patching of vulnerabilities by the global community. It supports a wide array of file systems like ext4 and Btrfs, offering flexible data management for DevOps and cloud computing.
-    <br><br>
+    linux: `In my technical exploration of open-source systems, I learned that Linux uses a Monolithic Kernel architecture. I found it impressive that all core OS services run in the kernel space, which I realized is why it is so fast and efficient for servers. From what I gathered, Linux is the backbone of the internet and supercomputers because it offers total transparency and freedom. I discovered that its security is superior because the global community can audit the code. I believe Linux is the best choice for developers who want complete control over their computing environment.
     <table class="os-table">
-        <tr><th>Feature</th><th>Technical Specification</th></tr>
+       <tr><th>Feature</th><th>Technical Specification</th></tr>
         <tr><td>Kernel Type</td><td>Monolithic</td></tr>
         <tr><td>File System</td><td>ext4, Btrfs, XFS</td></tr>
         <tr><td>Security</td><td>Permission-based (Sudo)</td></tr>
         <tr><td>License</td><td>Open Source (GPL)</td></tr>
         <tr><td>Primary Use</td><td>Servers & Development</td></tr>
-    </table>`
+    </table>
+    <div class="metrics-grid">
+        <div><div class="pie-chart" style="background: conic-gradient(#3fb950 98%, #222 0);">98%</div><span class="metric-label">Security</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#3fb950 99%, #222 0);">99%</div><span class="metric-label">Stability</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#3fb950 92%, #222 0);">92%</div><span class="metric-label">Performance</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#3fb950 100%, #222 0);">100%</div><span class="metric-label">Custom</span></div>
+        <div><div class="pie-chart" style="background: conic-gradient(#3fb950 65%, #222 0);">65%</div><span class="metric-label">Compat</span></div>
+    </div>
+    <div class="my-sign">DEVELOPED BY: NUMER JAN T. BANDE</div>`
 };
 
 function expand(os) {
