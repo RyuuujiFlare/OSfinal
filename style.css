@@ -1,0 +1,158 @@
+:root {
+    --neon-purple: #bc13fe;
+    --win-blue: #0078d4;
+    --mac-silver: #ffffff;
+    --lin-green: #3fb950;
+}
+
+body {
+    background: #000; /* True black background */
+    color: white;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    transition: background 0.8s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Background overlay for the purple glow */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(188, 19, 254, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--neon-purple);
+    margin-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 15px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* Specific Border Colors */
+#win-card { border-bottom: 4px solid var(--win-blue); }
+#mac-card { border-bottom: 4px solid var(--mac-silver); }
+#lin-card { border-bottom: 4px solid var(--lin-green); }
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+}
+
+.content {
+    display: none; /* Hidden until clicked */
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.8;
+    animation: fadeIn 0.5s ease;
+}
+
+/* The "Grow" State */
+.card.expanded {
+    width: 100%;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card.expanded .content { display: block; }
+.card.expanded .icon { font-size: 80px; }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+    header h1 { font-size: 1.8rem; }
+}
+
+/* Background Color Classes */
+.bg-windows { background-color: #001a33 !important; }
+.bg-mac { background-color: #1a1a1a !important; }
+.bg-linux { background-color: #0d1a0a !important; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- Add this to your existing style.css --- */
+
+.os-table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease;
+}
+
+.os-table th, .os-table td {
+    border: 1px solid rgba(188, 19, 254, 0.3);
+    padding: 12px;
+    text-align: left;
+}
+
+.os-table th {
+    background: rgba(188, 19, 254, 0.2);
+    color: var(--neon-purple);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.os-table tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile fix for table */
+@media (max-width: 600px) {
+    .os-table {
+        font-size: 0.75rem;
+    }
+    .os-table th, .os-table td {
+        padding: 8px;
+    }
+}

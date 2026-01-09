@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Showdown: Windows vs Mac vs Linux</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bg">
+    
+    <header>
+        <h1>Operating System Showdown</h1>
+        <p>Bande, Numer Jan T.    BSCS 3-1</p>
+    </header>
+
+    <div class="container">
+        <div class="card" id="win-card" onclick="expand('windows')">
+            <i class="fab fa-windows icon" style="color: #0078d4;"></i>
+            <h2>Windows</h2>
+            <div class="content"></div>
+        </div>
+
+        <div class="card" id="mac-card" onclick="expand('mac')">
+            <i class="fab fa-apple icon" style="color: #ffffff;"></i>
+            <h2>macOS</h2>
+            <div class="content"></div>
+        </div>
+
+        <div class="card" id="lin-card" onclick="expand('linux')">
+            <i class="fab fa-linux icon" style="color: #f7df1e;"></i>
+            <h2>Linux</h2>
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <footer class="bibliography">
+        <h3>Bibliography & References</h3>
+        <ul>
+            <li>Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). <em>Operating System Concepts</em>. Wiley.</li>
+            <li>Microsoft Learn. (2024). <em>Windows NT Architecture and Kernel Overview</em>.</li>
+            <li>Apple Developer Documentation. (2024). <em>Kernel Programming Guide: Mach and BSD</em>.</li>
+            <li>The Linux Foundation. (2024). <em>Understanding the Monolithic Linux Kernel</em>.</li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
